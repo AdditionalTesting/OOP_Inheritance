@@ -10,7 +10,7 @@ class Person
 
 end
 
-class Student
+class Student < Person
 
   def initialize
 
@@ -22,7 +22,7 @@ class Student
 
 end
 
-class Instructor
+class Instructor < Person
 
   def initialize
 
@@ -33,3 +33,8 @@ def teach
 end
 
 end
+
+chris = Instructor.new("Chris")
+chris.greeting
+cristina = Student.new("Cristina")
+cristina.greeting
