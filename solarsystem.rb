@@ -3,8 +3,9 @@ class System
 
   @@bodies = []
 
-  def bodies
+  def all
     @@bodies
+  end
 
 
   def add
@@ -13,8 +14,9 @@ class System
 
   def total_mass
     sum = 0
-    @bodies.each do |one|
-
+    @@bodies.each do |one|
+      sum = sum + one.mass
+      return sum
     end
   end
 
@@ -28,6 +30,7 @@ class Body < System
     @name = name
     @mass = mass
   end
+
 end
 
 class Planets < Body
@@ -43,3 +46,16 @@ end
 class Stars < Body
 
   def initialize(name, mass, type)
+    super (name, mass)
+    @type = type
+  end
+end
+
+class Moons < Body
+
+  def initialize(name, mass, month, planet)
+    super (name, mass)
+    @month = month
+    @planet = planet
+  end
+end
