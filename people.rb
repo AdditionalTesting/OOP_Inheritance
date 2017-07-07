@@ -12,9 +12,7 @@ end
 
 class Student < Person
 
-  def initialize
 
-  end
 
   def learn
     puts "I get it"
@@ -24,9 +22,7 @@ end
 
 class Instructor < Person
 
-  def initialize
 
-  end
 
 def teach
   puts "everything in Ruby is an Object"
@@ -41,4 +37,4 @@ cristina.greeting
 chris.teach
 cristina.learn
 
-#teach on cristina doesn't work because she doesn't belong to the instructor class, and the "teach" method is exclusive to that class 
+#teach on cristina doesn't work because she doesn't belong to the instructor class, and the "teach" method is exclusive to that class
